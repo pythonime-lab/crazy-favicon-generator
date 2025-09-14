@@ -1,6 +1,6 @@
 Contact: mailto:pythonime[at]gmail[dot]com
 Expires: 2026-09-13T23:59:59.000Z
-Canonical: https://yoursite.com/.well-known/security.txt
+Canonical: https://pythonime-lab.github.io/crazy-favicon-generator/.well-known/security.txt
 Preferred-Languages: en
 
 # Security contact for Crazy Favicon Generator (Educational Tool)
