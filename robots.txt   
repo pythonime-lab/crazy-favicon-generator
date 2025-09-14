@@ -1,0 +1,41 @@
+# Robots.txt for Crazy Favicon Generator
+# Non-commercial educational tool
+# Last updated: September 13, 2025
+
+User-agent: *
+Allow: /
+
+# Block legal documentation from indexing (privacy)
+Disallow: /legal/font-licenses/
+Disallow: /.well-known/
+
+# Block any temporary or system files
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Allow legal pages (but not sensitive license files)
+Allow: /legal/index.html
+Allow: /legal/terms-of-service.html
+Allow: /legal/privacy-policy.html
+Allow: /legal/disclaimer.html
+
+# Allow documentation
+Allow: /docs/
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Favicon generator specific
+# Allow favicon examples and generated files
+Allow: /favicon-*.png
+Allow: /favicon.ico
+Allow: /manifest.json

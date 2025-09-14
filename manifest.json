@@ -1,0 +1,23 @@
+{
+  "name": "Grazy Favicon Generator",
+  "short_name": "Crazy Fav Gen",
+  "description": "Free online favicon generator with custom fonts.",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#4A90E2",
+  "background_color": "#f4f1e8",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/"
+}

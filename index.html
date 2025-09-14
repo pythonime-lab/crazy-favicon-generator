@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="nofollow">
+    <meta name="theme-color" content="#4A90E2">
+    <meta name="app-name" content="Crazy Favicon Generator">
+    <meta name="short-name" content="Crazy Fav Gen">
+    <meta name="description" content="Free online favicon generator with custom fonts and effects.">
+    <link rel="manifest" href="/manifest.json">
+    <title>Crazy Favicon Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    
+    <!-- Favicons for browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    
+    <!-- Apple Touch Icons (for iOS/Safari) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-72x72.png">
+
+    <meta name="msapplication-TileColor" content="#4A90E2">
+    <meta name="msapplication-TileImage" content="/images/favicon-144x144.png">
+
+  </head>
+  <body>
+    <h1 id="pageTitle">Crazy Favicon Generator</h1>
+    <div class="container">
+      <div class="wrapper">
+        <div class="scroll-container" id="scrollContainer">
+          <div class="upload-group">
+            <div class="image-upload">
+              <div class="upload-area">
+                <label for="imageFile">📁 Upload Image (PNG/JPG/SVG)</label>
+                <input
+                  type="file"
+                  id="imageFile"
+                  accept=".png,.jpg,.jpeg,.svg"
+                  style="display: none"
+                />
+                <p style="margin: 10px 0 0 0; font-size: 12px; color: #6b7280">
+                  Optional: will appear behind or instead of letter
+                </p>
+              </div>
+            </div>
+
+            <div class="font-upload">
+              <div class="upload-area">
+                <label for="fontFile">📁 Upload Font (TTF/WOFF)</label>
+                <input
+                  type="file"
+                  id="fontFile"
+                  accept=".ttf,.woff,.woff2,.otf"
+                  style="display: none"
+                />
+                <p style="margin: 10px 0 0 0; font-size: 12px; color: #6b7280">
+                  Or we'll use a fallback font
+                </p>
+              </div>
+            </div>
+
+            <div class="controls">
+              <div class="control-group">
+                <label for="shape">Shape:</label>
+                <select id="shape">
+                  <option value="circle">Circle</option>
+                  <option value="square">Square</option>
+                  <option value="triangle">Triangle</option>
+                  <option value="rounded">Rounded Square</option>
+                  <option value="sketchy-shape" selected>Sketchy</option>
+                </select>
+
+                <label for="size">Canvas Size:</label>
+                <select id="size">
+                  <option value="512">512x512</option>
+                  <option value="256">256x256</option>
+                  <option value="192" selected>192x192</option>
+                  <option value="180">180x180</option>
+                  <option value="152">152x152</option>
+                  <option value="144">144x144</option>
+                  <option value="128">128x128</option>
+                  <option value="96">96x96</option>
+                  <option value="72">72x72</option>
+                  <option value="64">64x64</option>
+                  <option value="48">48x48</option>
+                  <option value="32">32x32</option>
+                  <option value="16">16x16</option>
+                </select>
+              </div>
+              <div>
+                <div class="control-group">
+                  <label for="letter">Letter/Text:</label>
+                  <input type="text" id="letter" value="CFG" maxlength="5" />
+                </div>
+
+                <div class="control-group">
+                  <label for="fontScale"
+                    >Font scale: x<span id="fontScaleValue">0.56</span></label
+                  >
+                  <input
+                    type="range"
+                    id="fontScale"
+                    min="0.3"
+                    max="1.2"
+                    step="0.01"
+                    value="0.56"
+                  />
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="effect">Font Effect:</label>
+                <select id="effect">
+                  <option value="none">None</option>
+                  <option value="stroke" selected>Outline</option>
+                  <option value="glow">Glow</option>
+                  <option value="gradient">Gradient</option>
+                  <option value="emboss">Emboss</option>
+                </select>
+
+                <div class="control-group">
+                  <div class="text-color-div">
+                    <div>
+                      <label for="textColor1">Text Color:</label>
+                      <input
+                        type="color"
+                        id="textColor1"
+                        value="#4A90E2"
+                        class="color-input"
+                      />
+                    </div>
+                    <div>
+                      <label for="textColor2">Text Effect Color:</label>
+                      <input
+                        type="color"
+                        id="textColor2"
+                        value="#2D2D2D"
+                        class="color-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="bgEffect">Background Effect:</label>
+                <select id="bgEffect">
+                  <option value="none">None</option>
+                  <option value="solid">Solid</option>
+                  <option value="gradient">Linear Gradient</option>
+                  <option value="radial">Radial Gradient</option>
+                  <option value="shadow">With Shadow</option>
+                  <option value="stroke" selected>Outline</option>
+                </select>
+
+                <div class="control-group">
+                  <div class="text-color-div">
+                    <div>
+                      <label for="bgColor1">Bg Color:</label>
+                      <input
+                        type="color"
+                        id="bgColor1"
+                        value="#f4f1e8"
+                        class="color-input"
+                      />
+                    </div>
+                    <div>
+                      <label for="bgColor2">Bg Effect Color:</label>
+                      <input
+                        type="color"
+                        id="bgColor2"
+                        value="#2D2D2D"
+                        class="color-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-section">
+          <h2 class="section-title">🔗 HTML Implementation</h2>
+          <div class="snippet-container">
+            <button class="copy-btn">Copy</button>
+            <pre
+              class="snippet-code"
+              id="htmlSnippet"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="preview-section">
+          <div class="position-controls">        
+            <div class="axis-control">
+              <span class="axis-label">Bg-X: </span>
+              <div class="button-group">
+                <button type="button" id="bg-x-minus" class="control-btn" type="button" title="Move Left">⇐</button>
+                <span id="bg-x-value" class="value-display">0</span>
+                <button type="button" id="bg-x-plus" class="control-btn" type="button" title="Move Right">⇒</button>
+              </div>
+            </div>
+            
+            <div class="axis-control">
+              <span class="axis-label">Bg-Y: </span>
+              <div class="button-group">
+                <button type="button" id="bg-y-minus" class="control-btn" type="button" title="Move Up">⇑</button>
+                <span id="bg-y-value" class="value-display">0</span>
+                <button type="button" id="bg-y-plus" class="control-btn" type="button" title="Move Down">⇓</button>
+              </div>
+            </div>
+
+            <div class="axis-control">
+              <span class="axis-label">Text-X: </span>
+              <div class="button-group">
+                <button type="button" id="text-x-minus" class="control-btn" type="button" title="Move Left">⇐</button>
+                <span id="text-x-value" class="value-display">0</span>
+                <button type="button" id="text-x-plus" class="control-btn" type="button" title="Move Right">⇒</button>
+              </div>
+            </div>
+            
+            <div class="axis-control">
+              <span class="axis-label">Text-Y: </span>
+              <div class="button-group">
+                <button type="button" id="text-y-minus" class="control-btn" type="button" title="Move Up">⇑</button>
+                <span id="text-y-value" class="value-display">0</span>
+                <button type="button" id="text-y-plus" class="control-btn">⇓</button>
+              </div>
+            </div>
+          </div>
+          <div class="canvas-container">
+            <canvas id="faviconCanvas" width="512" height="512"></canvas>
+          </div>
+          <button id="resetDefaultsBtn" title="Reset to Defaults">⟳</button>
+        </div>
+
+        <div class="buttons">
+          <button class="btn btn-secondary" id="downloadPNGBtn">
+            📥 Download PNG
+          </button>
+          <button class="btn btn-secondary" id="downloadAllBtn">
+            📦 Download All Sizes
+          </button>
+
+          <button
+            id="manifestBtn"
+            class="download-btn manifest"
+            disabled
+          >
+            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            &nbsp;manifest
+          </button>
+          <button id="downloadAbout" class="download-btn" disabled>
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 3v4a1 1 0 0 0 1 1h4"/>
+            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/>
+            <path d="M9 9l1 0"/>
+            <path d="M9 13l6 0"/>
+            <path d="M9 17l6 0"/>
+          </svg>
+            about.txt
+          </button>
+        </div>
+        <div id="about-warning" class="warning-box">
+          ⚠️ <strong>Reminder:</strong> Please review and update
+          <code>about.txt</code>
+          with the correct author and license before distributing. Some fonts
+          require you to include their license file.
+
+          <div style="margin-top: 8px">
+            <input type="checkbox" id="about-confirm" />
+            <label for="about-confirm">I understand</label>
+          </div><br>
+
+          ⚠️ <strong>Reminder:</strong> The manifest snippet contains default values.  
+          You MUST update <code>name</code> and <code>short_name</code> before publishing.
+
+          <div style="margin-top:8px">
+            <input type="checkbox" id="manifest-confirm">
+            <label for="manifest-confirm">I understand</label>
+          </div>
+        </div>
+        <div class="legal-section">
+          <div class="legal-container">
+            <div class="legal-links">
+              <h4>Legal Documentation</h4>
+              <a href="legal/terms-of-service.html">Terms of Service</a>
+              <a href="legal/privacy-policy.html">Privacy Policy</a>
+              <a href="legal/disclaimer.html">Legal Disclaimer</a>
+              <a href="legal/font-licenses/">Font License Information</a>
+              <a href="legal/">Complete Legal Information</a>
+              
+              <div class="legal-note">
+                This is a non-commercial educational tool. Please review our legal documents before use.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="credits-section">
+          <div class="credits-container">
+            <div class="credits-code">
+              <span class="comment"><br> ============================= <br></span>
+              <span class="comment">   Developed with passion by Py 🔥<br></span>
+              <span class="comment">   Special thanks to Polimnia ✨<br></span>
+              <span class="comment"> ============================= </span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
