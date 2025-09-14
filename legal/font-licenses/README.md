@@ -16,5 +16,5 @@ When using custom fonts in the favicon generator:
 
 ## License Files
 - `OFL.txt` - Full SIL Open Font License text
-- `kalam-license.txt` - Specific information about our default font
+- `about.txt` - Specific information about our default font
 
