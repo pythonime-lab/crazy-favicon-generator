@@ -904,6 +904,9 @@ canvas {
     max-width: max-content;
   }
 
+  #pageTitle:hover {
+    animation: wiggle 2s ease-in-out infinite;
+  }
 
   .axis-label {
     min-width: 55px;
