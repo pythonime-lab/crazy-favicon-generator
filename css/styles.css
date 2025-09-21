@@ -905,7 +905,7 @@ canvas {
   }
 
   #pageTitle:hover {
-    animation: wiggle 2s ease-in-out infinite;
+    animation: none;
   }
 
   .axis-label {
