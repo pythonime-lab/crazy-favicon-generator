@@ -838,8 +838,30 @@ canvas {
     margin-bottom: 0;
   }
 
+  .wrapper {
+    order: 2; /* default order for all wrappers */
+  }
+
+  .wrapper:nth-child(2) {
+    order: 1; /* move the second wrapper to the top */
+  }
   .controls {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .credits-code {
+    position: fixed;
+    bottom: 0;
+    margin: 2rem 0 1rem 0;
+    z-index: 9999;
+  }
+
+  .snippet-section {
+    margin-bottom: 100px;
+  }
+
+  #pageTitle:hover {
+    animation: none;
   }
 }
 
@@ -860,7 +882,7 @@ canvas {
 
   .container {
     padding: 20px;
-    margin: 10px auto;
+    margin: 25px auto;
     display: flex;
   }
 
@@ -874,7 +896,7 @@ canvas {
     transform: rotate(-0.1deg);
     text-align: center;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
     background: #f5eddd;
     padding: 60px 0 0 0;
     border: none;
@@ -891,19 +913,18 @@ canvas {
     top: 20%;
   }
 
-
   /* Ensure pageTitle stays on top */
   #pageTitle {
     position: fixed;
-    top: 10px;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10000;
     background: white;
     margin: 0;
+    margin-top: 1rem;
     max-width: max-content;
   }
-
 
   .axis-label {
     min-width: 55px;
@@ -911,9 +932,5 @@ canvas {
 
   .button-group {
     gap: 5px;
-  }
-
-  #faviconCanvas {
-    border: none;
   }
 }
