@@ -926,6 +926,13 @@ canvas {
     max-width: max-content;
   }
 
+<<<<<<< HEAD
+=======
+  #pageTitle:hover {
+    animation: none;
+  }
+
+>>>>>>> c8d2dd298c24f7ca09d0bb5effb70348d0cb8035
   .axis-label {
     min-width: 55px;
   }
