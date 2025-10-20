@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Callback Handler</title>
+    <style>
+        body { font-family: monospace; padding: 20px; max-width: 800px; margin: 0 auto; }
+        textarea { width: 100%; height: 120px; margin: 10px 0; }
+        input { width: 100%; padding: 5px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Tumblr OAuth Callback</h1>
+    <p>✅ Authorization successful!</p>
+    
+    <h3>Full Callback URL:</h3>
+    <textarea id="callback-url" readonly></textarea>
+    
+    <h3>OAuth Verifier:</h3>
+    <input type="text" id="verifier" readonly />
+    
+    <h3>OAuth Token:</h3>
+    <input type="text" id="token" readonly />
+    
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const verifier = params.get('oauth_verifier');
+        const token = params.get('oauth_token');
+        
+        document.getElementById('callback-url').value = window.location.href;
+        document.getElementById('verifier').value = verifier || 'Not found';
+        document.getElementById('token').value = token || 'Not found';
+        
+        // Auto-select callback URL for easy copying
+        document.getElementById('callback-url').select();
+        
+        // Show alert with verifier for quick access
+        if (verifier) {
+            console.log('OAuth Verifier:', verifier);
+            console.log('OAuth Token:', token);
+        }
+    </script>
+</body>
+</html>
